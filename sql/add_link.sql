@@ -1,0 +1,18 @@
+alter table jihen_intern.comics add linkURL varchar(256);
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/2573" WHERE title = "微分、積分、世界の終わり";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/2571" WHERE title = "ビックリビッグ";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1911" WHERE title = "21世紀坊っちゃん's";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1826" WHERE title = "レオの柩";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1825" WHERE title = "霊能探偵事件簿";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1788" WHERE title = "ボストーク";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1771" WHERE title = "GATO -ゼロイチの戦場-";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1647" WHERE title = "クランクUP!!";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1646" WHERE title = "アルキメデスのお風呂";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1437" WHERE title = "のんびりヌルントゥルン";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1436" WHERE title = "マグネット島通信";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1352" WHERE title = "オンラインの羊たち";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1270" WHERE title = "アンパンメン";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1264" WHERE title = "神様の思し召し";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1263" WHERE title = "標本のイデア";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1262" WHERE title = "ワンダーリングアラウンドプリズナー";
+update jihen_intern.comics SET linkURL = "https://jihen.jp/product/1256" WHERE title = "電波青年";
