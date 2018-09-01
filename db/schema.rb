@@ -13,28 +13,36 @@
 ActiveRecord::Schema.define(version: 20180901094132) do
 
   create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name", null: false
+    t.text "info", null: false
   end
 
-  create_table "comic_authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "comic_author", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "comic_id", null: false
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_comic_author_on_author_id"
+    t.index ["comic_id"], name: "index_comic_author_on_comic_id"
   end
 
   create_table "comics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "title", null: false
+    t.text "summary", null: false
+    t.string "linkURL", limit: 20
   end
 
   create_table "location_comics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "location_id", null: false
+    t.bigint "comic_id", null: false
+    t.index ["comic_id"], name: "index_location_comics_on_comic_id"
+    t.index ["location_id"], name: "index_location_comics_on_location_id"
   end
 
   create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name", null: false
   end
 
+  add_foreign_key "comic_author", "authors"
+  add_foreign_key "comic_author", "comics"
+  add_foreign_key "location_comics", "comics"
+  add_foreign_key "location_comics", "locations"
 end
