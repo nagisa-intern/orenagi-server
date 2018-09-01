@@ -1,3 +1,5 @@
+package model
+
 import "github.com/naoina/genmai"
 
 type Location struct {
