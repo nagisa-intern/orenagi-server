@@ -1,2 +1,0 @@
-class ComicDatum < ApplicationRecord
-end
