@@ -16,26 +16,9 @@ func main() {
 		panic(err)
 	}
 	defer db.Close()
-	if err := db.CreateTable(&Comics{}); err != nil {
-		panic(err)
-	}
-	if err := db.CreateTable(&Authors{}); err != nil {
-		panic(err)
-	}
-	if err := db.CreateTable(&Location{}); err != nil {
-		panic(err)
-	}
-	if err := db.CreateTable(&ComicAuthor{}); err != nil {
-		panic(err)
-	}
-	if err := db.CreateTable(&ComicData{}); err != nil {
-		panic(err)
-	}
-	if err := db.CreateTable(&ComicLocation{}); err != nil {
-		panic(err)
-	}
 	router := gin.Default()
-	router.GET("/", func(c *gin.Context) {
+	router.GET("/comic_list/get", func(c *gin.Context) {
+		locname := c.Query("locname")
 	})
 	router.Run(EXPOSED_PORT)
 
