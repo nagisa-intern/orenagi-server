@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DB(メモ)
 
-Things you may want to cover:
+MySQL のコマンドと`rails db:hoge`をするのが混ざってしまって悲しい。
 
-* Ruby version
+手順
 
-* System dependencies
+1. `bundle exec rails db:create`
 
-* Configuration
+2. `bundle exec rails db:migrate`
 
-* Database creation
+3. `bundle exec rails db:seed`
 
-* Database initialization
+4. `mysql -u user -p orenagi_devel < sql/sample.sql`
 
-* How to run the test suite
+5. `script/get_link_for_comics.rb`
 
-* Services (job queues, cache servers, search engines, etc.)
+6. `mysql -u user -p orenagi_devel < sql/add_link.sql`
 
-* Deployment instructions
-
-* ...
+多分、こんな感じでローカルで DB つくれる。
